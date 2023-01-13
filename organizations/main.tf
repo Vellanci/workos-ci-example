@@ -1,4 +1,11 @@
 terraform {
+  cloud {
+    organization = "Vellanci"
+
+    workspaces {
+      name = "workos-ci-example"
+    }
+  }
   required_providers {
     workos = {
       source  = "Vellanci/workos"

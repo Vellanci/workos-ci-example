@@ -12,6 +12,8 @@ jobs:
       pull-requests: write
     steps:
       - uses: hashicorp/setup-terraform@v2
+        with:
+          cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
       - uses: actions/checkout@v3
       - name: Terraform Format
         id: fmt

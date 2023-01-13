@@ -1,7 +1,8 @@
 terraform {
   required_providers {
     workos = {
-      source = "hashicorp.com/aleshchynskyi/workos"
+      source  = "Vellanci/workos"
+      version = "0.1.1"
     }
   }
   required_version = ">= 1.1.0"
@@ -12,7 +13,7 @@ provider "workos" {
 }
 
 resource "workos_organization" "example" {
-  name = "Provided Org by Terraform"
+  name    = "Provided Org by Terraform"
   domains = ["provided-org.org", "provided-org.ua"]
 }
 

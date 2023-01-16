@@ -18,13 +18,12 @@ provider "workos" {
   host = "https://api.workos.com"
 }
 
+resource "workos_organization" "google" {
+  name    = "Google"
+  domains = ["google.com", "google.com.ua"]
+}
 
 resource "workos_organization" "amazon" {
   name    = "Amazon"
-  domains = ["amazon.com", "amazon.fr"]
-}
-
-resource "workos_organization" "netflix" {
-  name    = "Netflix"
-  domains = ["netflix.com"]
+  domains = ["amazon.com", "amazon.de"]
 }

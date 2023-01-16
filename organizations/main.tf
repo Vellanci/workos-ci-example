@@ -18,11 +18,12 @@ provider "workos" {
   host = "https://api.workos.com"
 }
 
-resource "workos_organization" "example" {
-  name    = "Provided Org by Terraform"
-  domains = ["provided-org.org", "provided-org.ua"]
+resource "workos_organization" "google" {
+  name    = "Google"
+  domains = ["google.com", "google.com.ua"]
 }
 
-output "example_organizations" {
-  value = workos_organization.example
+resource "workos_organization" "amazon" {
+  name    = "Amazon"
+  domains = ["amazon.com", "amazon.de"]
 }
